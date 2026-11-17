@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Izal 💙</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #dceeff;
+    color: #42658b;
+    overflow-x: hidden;
+}
+
+/* LATAR */
+
+body::before {
+    content: "♡  ✦  ☁  ♡  ✧  ";
+    position: fixed;
+    top: 15px;
+    left: 10px;
+    font-size: 22px;
+    color: #a5c9ed;
+    opacity: .6;
+    z-index: 0;
+}
+
+/* HALAMAN */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 22px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.page.active {
+    display: flex;
+    animation: muncul .8s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* KOTAK */
+
+.box {
+    background: rgba(255,255,255,.75);
+    padding: 30px 23px;
+    border-radius: 28px;
+    border: 2px dashed #a7c9ed;
+    box-shadow: 0 8px 25px #9bbfe344;
+    max-width: 480px;
+    width: 100%;
+}
+
+/* TULISAN */
+
+.label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #8aafd5;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 38px;
+    color: #5986b5;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 27px;
+    color: #5986b5;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 2;
+    color: #617f9f;
+}
+
+.dekorasi {
+    font-size: 35px;
+    margin: 15px;
+}
+
+/* TOMBOL */
+
+button {
+    background: #a9cbee;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 25px;
+    margin-top: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #9bbfe355;
+    transition: .3s;
+}
+
+button:hover {
+    background: #78a9d9;
+    transform: scale(1.06);
+}
+
+/* FOTO */
+
+.foto {
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 5px 15px #8eb6df55;
+}
+
+.foto img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.foto p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.galeri {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+/* SURAT */
+
+.surat {
+    background: #f4f9ff;
+    padding: 23px;
+    border-radius: 18px;
+    text-align: left;
+    line-height: 2;
+    color: #617f9f;
+    border: 1px solid #c5dcf5;
+}
+
+/* MUSIK */
+
+.musik {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+.musik button {
+    margin: 0;
+    padding: 11px 17px;
+}
+
+/* HIASAN */
+
+.hiasan {
+    color: #91bce5;
+    font-size: 22px;
+    margin: 10px;
+}
+
+.kaki {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #91afd0;
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="lagu" loop>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+
+<div class="musik">
+    <button onclick="putarLagu()" id="tombolMusik">
+        ♫ Putar lagu
+    </button>
+</div>
+
+
+<!-- HALAMAN 1 -->
+
+<section class="page active" id="halaman1">
+
+<div class="box">
+
+<div class="label">SEBUAH HADIAH KECIL UNTUK IZAL</div>
+
+<div class="dekorasi">💌🤍</div>
+
+<h1>Halo, Izal Sayang♡!</h1>
+
+<p>
+Ada sebuah tempat kecil yang sengaja
+dibuat untuk seseorang yang sedang
+merayakan hari istimewanya.
+<br><br>
+Dan hari ini, seluruh cerita di dalamnya
+adalah tentang kamu.
+</p>
+
+<div class="hiasan">୨୧ ♡ ୨୧</div>
+
+<button onclick="pindah(2)">
+Buka hadiahmu ♡
+</button>
+
+<div class="kaki">
+Spesial untuk Izall.
+</div>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 2 -->
+
+<section class="page" id="halaman2">
+
+<div class="box">
+
+<div class="label">HALAMAN KEDUA</div>
+
+<div class="dekorasi">🎂 🎈 🩵</div>
+
+<h1>Selamat Ulang Tahun!</h1>
+
+<p>
+Selamat bertambah usia, sayang.
+<br><br>
+Hari ini, dunia sedang merayakan
+salah satu tanggal paling istimewa,
+yaitu hari ketika seseorang sepertimu
+hadir dan memulai ceritanya.
+<br><br>
+Semoga usia yang baru membawa
+lebih banyak kebahagiaan, ketenangan,
+dan hal-hal baik yang selama ini
+diam-diam kamu harapkan.
+</p>
+
+<button onclick="pindah(3)">
+Lanjutkan ceritanya →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 3 -->
+
+<section class="page" id="halaman3">
+
+<div class="box">
+
+<div class="label">HALAMAN KETIGA</div>
+
+<div class="dekorasi">🧸 ☁️</div>
+
+<h2>Tentang Izal</h2>
+
+<p>
+Sayang, mungkin kamu tidak selalu
+menyadari betapa berharganya dirimu.
+<br><br>
+Ada hal-hal sederhana dari dirimu
+yang mungkin tidak kamu anggap istimewa,
+tetapi justru menjadi bagian kecil
+yang membuatmu berbeda.
+<br><br>
+Kamu tidak harus selalu menjadi hebat.
+Tidak harus selalu terlihat kuat.
+Tidak harus selalu baik-baik saja.
+<br><br>
+Cukup terus menjadi dirimu sendiri,
+sebab kamu juga pantas dicintai
+dalam keadaan apa pun.
+</p>
+
+<button onclick="pindah(4)">
+Lihat kenangan kita →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 4 -->
+
+<section class="page" id="halaman4">
+
+<div class="box">
+
+<div class="label">HALAMAN KEEMPAT</div>
+
+<h2>Potongan Cerita Kita</h2>
+
+<p>
+Dua gambar, dua kenangan,
+dan banyak cerita di baliknya.
+</p>
+
+<div class="galeri">
+
+<div class="foto">
+<img src="foto1.jpg" alt="Foto pertama">
+<p>Salah satu kenangan kesukaanku ♡</p>
+</div>
+
+<div class="foto">
+<img src="foto2.jpg" alt="Foto kedua">
+<p>First fotbar after asing◍˃ᵕ˂◍ </p>
+</div>
+
+</div>
+
+<p>
+Semoga masih ada banyak cerita
+indah yang bisa kita abadikan
+di kemudian hari.
+</p>
+
+<button onclick="pindah(5)">
+Ada surat untukmu →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 5 -->
+
+<section class="page" id="halaman5">
+
+<div class="box">
+
+<div class="label">HALAMAN KELIMA</div>
+
+<div class="dekorasi">💌 🩵</div>
+
+<h2>Sepucuk Surat Untuk Izal</h2>
+
+<div class="surat">
+
+Untuk Izal, seseorang yang hari ini
+sedang bertambah usia.
+
+<br><br>
+
+Terima kasih karena sudah hadir
+dan menjadi bagian dari perjalanan
+yang sedang kita lalui.
+
+<br><br>
+
+Aku mungkin belum pandai menyusun
+kata untuk menjelaskan semua hal
+yang ingin kusampaikan.
+
+Namun, satu hal yang ingin selalu
+kamu ingat: aku berharap hidup
+memperlakukanmu dengan lembut.
+
+<br><br>
+
+Jika suatu hari langkahmu terasa berat,
+jangan merasa harus menyelesaikan
+semuanya sekaligus.
+
+Beristirahatlah, tarik napas,
+lalu lanjutkan kembali ketika siap.
+
+<br><br>
+
+Aku ingin melihatmu tumbuh,
+menggapai cita-cita, dan menemukan
+banyak alasan untuk bahagia.
+
+<br><br>
+
+Dengan segala doa baik,
+seseorang yang menyayangimu. ♡
+
+</div>
+
+<button onclick="pindah(6)">
+Baca doa-doaku →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 6 -->
+
+<section class="page" id="halaman6">
+
+<div class="box">
+
+<div class="label">HALAMAN KEENAM</div>
+
+<div class="dekorasi">🌷 ☁️ ✨</div>
+
+<h2>Harapan Kecil Dariku</h2>
+
+<p>
+Untukmu, kesayanganku.
+<br><br>
+
+Semoga sehat selalu.
+<br>
+Semoga rezekimu dilapangkan.
+<br>
+Semoga segala urusanmu dimudahkan.
+<br>
+Semoga cita-citamu menemukan jalan.
+<br>
+Semoga hatimu selalu dipenuhi ketenangan.
+<br>
+Semoga kamu dikelilingi orang-orang baik.
+<br>
+Semoga tidak ada mimpi yang membuatmu
+berhenti percaya pada dirimu sendiri.
+<br>
+Semoga aku selalu ada di setiap ceritamu.
+<br><br>
+
+Dan yang paling penting,
+semoga kamu selalu punya alasan
+untuk mensyukuri hari-harimu.
+</p>
+
+<button onclick="pindah(7)">
+Ada satu kejutan lagi →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 7 -->
+
+<section class="page" id="halaman7">
+
+<div class="box">
+
+<div class="label">HALAMAN RAHASIA</div>
+
+<div class="dekorasi">🎀 💗 🎀</div>
+
+<h2>Eh, sayang!</h2>
+
+<p>
+Sebelum kamu menyelesaikan
+perjalanan kecil ini,
+ada satu pesan yang belum kamu baca.
+<br><br>
+Tekan tombol di bawah, ya!
+</p>
+
+<button onclick="bukaRahasia()">
+Buka pesan rahasia ♡
+</button>
+
+<p id="rahasia" style="display:none; margin-top:25px;">
+
+Kalau suatu saat kamu bertanya
+seberapa besar harapanku untukmu,
+jawabannya sederhana:
+<br><br>
+
+Aku ingin melihatmu bahagia.
+Bukan hanya hari ini,
+tetapi juga pada hari-hari
+yang belum sempat kita temui.
+<br><br>
+
+Jangan lupa bahagia, ya, sayang. 🩵
+
+</p>
+
+<button onclick="pindah(8)">
+Halaman terakhir →
+</button>
+
+</div>
+</section>
+
+
+<!-- HALAMAN 8 -->
+
+<section class="page" id="halaman8">
+
+<div class="box">
+
+<div class="dekorasi">🩵 🧸 ☁️</div>
+
+<h1>Selamat Ulang Tahun, sayang!</h1>
+
+<p>
+Akhir dari halaman ini,
+tetapi bukan akhir dari cerita
+yang masih ingin kita tulis.
+<br><br>
+
+Terima kasih sudah menjadi
+bagian dari dunia kecilku.
+<br><br>
+
+Semoga hari ini, esok, dan seterusnya
+selalu menyimpan kebahagiaan
+untukmu.
+<br><br>
+
+Tetaplah menjadi Izal
+yang selalu punya cerita
+untuk diceritakan.
+<br><br>
+
+<b>Dengan penuh cinta, untuk Izal. ♡</b>
+
+</p>
+
+<div class="hiasan">୨୧ ♡ ୨୧</div>
+
+<button onclick="pindah(1)">
+Baca dari awal ↻
+</button>
+
+<div class="kaki">
+Dari maymay khusus untuk Izal.
+</div>
+
+</div>
+</section>
+
+
+<script>
+
+// PINDAH HALAMAN
+
+function pindah(nomor) {
+
+    document.querySelectorAll('.page').forEach(p => {
+        p.classList.remove('active');
+    });
+
+    document.getElementById('halaman' + nomor)
+        .classList.add('active');
+
+    window.scrollTo(0, 0);
+
+}
+
+// MUSIK
+
+const lagu = document.getElementById("lagu");
+
+function putarLagu() {
+
+    const tombol = document.getElementById("tombolMusik");
+
+    if (lagu.paused) {
+
+        lagu.play();
+        tombol.innerHTML = "♫ Hentikan lagu";
+
+    } else {
+
+        lagu.pause();
+        tombol.innerHTML = "♫ Putar lagu";
+
+    }
+
+}
+
+// PESAN RAHASIA
+
+function bukaRahasia() {
+
+    document.getElementById("rahasia")
+        .style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
